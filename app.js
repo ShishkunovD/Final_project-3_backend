@@ -5,7 +5,7 @@ const app = express();
 
 app.use(cors());
 
-const url = 'mongodb+srv://ShishkunovD:restart987!@cluster0.8tbt5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const url = 'mongodb+srv://ShishkunovD:restart987!@cluster0.8tbt5.mongodb.net/Module-3_final_project?retryWrites=true&w=majority';
 mongoose.connect(url);
 
 app.listen('8000', () => {
