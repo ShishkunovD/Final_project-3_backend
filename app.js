@@ -2,15 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
-const Schema = mongoose.Schema;
-
-const goodSchema = new Schema({
-  where: String,
-  howMuch: Number,
-  day: String
-});
-
-const Good = mongoose.model("goods", goodSchema);
 
 app.use(cors());
 
