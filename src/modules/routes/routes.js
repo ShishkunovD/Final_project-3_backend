@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const {
-    getAllGoods
+  getAllGoods
 } = require('../controllers/task.controller');
 
 router.get('/getGoods', getAllGoods);
