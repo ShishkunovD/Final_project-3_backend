@@ -29,3 +29,17 @@ module.exports.deleteGood = (req, res) => {
     res.status(404).send('Error. Please enter id');
   }
 }
+
+module.exports.updateGood = (req, res) => {
+  if(req.query.id !== undefined && req.body.where !== undefined && typeof req.body.howMuch === 'number' && 
+  (typeof req.body.day === 'string' && req.body.day.length === 10)) {
+    const param = req.query.id;
+    Good.findByIdAndUpdate(param, req.body).then(result => {
+      Good.find().then(result => {
+        res.send({ data: result });
+      })
+    })
+  } else {
+    res.status(404).send('Error. Please enter all values correctly');
+  }
+}
